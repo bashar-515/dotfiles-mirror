@@ -1,0 +1,47 @@
+theme = "dark_plus"
+
+[editor]
+bufferline = "always"
+line-number = "relative"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.insert]
+j = { k = "normal_mode" }
+
+[keys.normal]
+"A-h" = "jump_view_left"
+"A-j" = "jump_view_down"
+"A-k" = "jump_view_up"
+"A-l" = "jump_view_right"
+
+"S-h" = "jump_view_left"
+"S-j" = "jump_view_down"
+"S-k" = "jump_view_up"
+"S-l" = "jump_view_right"
+
+"G" = "goto_last_line"
+"0" = "goto_line_start"
+"$" = "goto_line_end"
+
+[keys.select]
+"G" = "goto_last_line"
+"0" = "goto_line_start"
+"$" = "goto_line_end"
+
+[keys.normal.space.c]
+r = ":config-reload"
+
+[keys.normal.space.s]
+v = ":vsplit"
+h = ":hsplit"
+x = ":quit"
+
+[keys.normal.space.t]
+o = ":new"
+x = ":buffer-close"
+n = ":buffer-next"
+p = ":buffer-previous"

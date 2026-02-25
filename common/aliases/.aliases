@@ -1,0 +1,15 @@
+# commands
+alias ls='ls -a'
+alias cl='clear'
+alias sz='source ~/.zshrc'
+
+alias tmux='tmux -2 -u'
+alias one='tmux -L one'
+alias two='tmux -L two'
+alias three='tmux -L three'
+alias four='tmux -L four'
+
+# directories
+alias cb='cd ~/Developer/Git/Codeberg'
+alias gh='cd ~/Developer/Git/Github'
+alias gl='cd ~/Developer/Git/Gitlab'

@@ -1,0 +1,38 @@
+format = '''
+┌──$python$username$hostname$directory$git_branch$git_state$git_status$fill$cmd_duration$time
+└─$character'''
+
+[python]
+format = '(\($virtualenv\) )'
+
+[username]
+format = "[$user]($style)@"
+show_always = true
+
+[hostname]
+format = "[$hostname]($style) "
+ssh_only = false
+
+[git_branch]
+format = "on [$branch]($style)"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style))'
+modified = "*"
+
+[fill]
+symbol = " "
+
+[cmd_duration]
+format = "[$duration]($style) "
+min_time = 0
+
+[time]
+format = "[\\[$time\\]]($style)"
+use_12hr = true
+disabled = false
+
+[character]
+format = "$symbol "
+success_symbol = "[\\$](green)"
+error_symbol = "[\\$](red)"
