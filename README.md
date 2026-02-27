@@ -20,3 +20,5 @@
 
 - Show Finder path bar: View -> "Show Path Bar"
 - Show Finder status bar: View -> "Show Status Bar"
+
+### Misc.
