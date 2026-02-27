@@ -16,6 +16,7 @@ maybe_eval direnv hook zsh
 maybe_eval fnm env --use-on-cd --shell zsh
 
 maybe_source "$HOME/.aliases"
+maybe_source "$HOME/.aliases.local"
 maybe_source "/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 maybe_source "/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 maybe_source "$HOME/.config/anthropic/env"
