@@ -1,15 +1,8 @@
 # dotfiles
 
-## Darwin
+## Settings
 
-### Requisite Tools
-
-1. Xcode command line tools
-2. Homebrew
-
-#### Settings
-
-##### System
+### System
 
 - Navigate desktops using CTRL: Settings -> Keyboard -> Keyboard Shortcuts -> Mission Control -> "Mission Control"
 - Stop automatically rearranging desktops: Settings -> Desktop & Dock -> "Automatically rearrange Spaces based on most recent use"
@@ -23,7 +16,7 @@
 - Stop rearranging apps in dock: Settings -> Desktop & Dock -> "Show suggested and recent apps in dock"
 - Don't autofill passwords: Settings -> Autofill & Passwords -> "Autofill Passwords and Passkeys"
 
-##### Finder
+### Finder
 
 - Show Finder path bar: View -> "Show Path Bar"
 - Show Finder status bar: View -> "Show Status Bar"
