@@ -1,11 +1,11 @@
 #!/bin/bash
 
 set -euxo pipefail
-command -v stow >/dev/null || { echo "stow is not installed" >&2; exit 1; }
+command -v stow >/dev/null || { echo "command 'stow' does not exist" >&2; exit 1; }
 
 dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)/common"
 
-[ -d "$dir" ] || { echo "$dir does not exist" >&2; exit 1; }
+[ -d "$dir" ] || { echo "dir '$dir' does not exist" >&2; exit 1; }
 
 for pkg in "$dir"/*/; do
     # e.g., stow -d ~/.files/common -t ~/. nvim
