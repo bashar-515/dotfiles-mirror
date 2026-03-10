@@ -9,6 +9,7 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 brew "go"
 brew "fnm"
+brew "tailscale"
 
 cask "firefox"
 cask "bitwarden"
