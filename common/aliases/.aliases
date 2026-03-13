@@ -10,8 +10,7 @@ alias three='tmux -L three'
 alias four='tmux -L four'
 
 # directories
-alias cb='cd ~/Developer/Git/Codeberg'
 alias gh='cd ~/Developer/Git/Github'
-alias gl='cd ~/Developer/Git/Gitlab'
 
 alias dot='cd ~/Developer/Git/Github/dotfiles'
+alias clad='cd ~/Developer/Git/Github/Clad/clad-dashboard'
