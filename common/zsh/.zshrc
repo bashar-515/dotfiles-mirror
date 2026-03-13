@@ -19,6 +19,7 @@ maybe_source "$HOME/.aliases"
 maybe_source "/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 maybe_source "/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
-if command -v go >/dev/null 2>&1; then
-  export PATH="$(go env GOPATH)/bin:$PATH"
-fi
+export PATH="/opt/homebrew/opt/jpeg/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/jpeg/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/jpeg/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/jpeg/lib/pkgconfig"
