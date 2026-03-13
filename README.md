@@ -16,6 +16,7 @@
 - Stop rearranging apps in dock: Settings -> Desktop & Dock -> "Show suggested and recent apps in dock"
 - Don't autofill passwords: Settings -> Autofill & Passwords -> "Autofill Passwords and Passkeys"
 - Don't sleep when display is closed to allow always allow SSH connections: Settings -> Battery -> options -> toggle "Prevent automatic sleeping on power adapter when the display is off" on
+- Minimize sound effects: Settings -> Sound -> toggle off "play user interface sound effects"
 
 ### Finder
 
