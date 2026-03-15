@@ -22,3 +22,5 @@ cask "adobe-creative-cloud"
 cask "ableton-live-suite"
 cask "spotify"
 cask "obsidian"
+
+cask "claude-code"
