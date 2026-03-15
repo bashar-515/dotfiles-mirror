@@ -1,9 +1,9 @@
 #!/bin/bash
 
-set -euxo pipefail
+set -euo pipefail
 command -v stow >/dev/null || { echo "command 'stow' does not exist" >&2; exit 1; }
 
-dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)/common"
+dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/../.." && pwd)/common"
 
 [ -d "$dir" ] || { echo "dir '$dir' does not exist" >&2; exit 1; }
 
