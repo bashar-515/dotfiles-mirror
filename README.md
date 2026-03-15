@@ -8,6 +8,7 @@
 - Stop automatically rearranging desktops: Settings -> Desktop & Dock -> "Automatically rearrange Spaces based on most recent use"
 - Swap CTRL and CAPS LOCK keys: Settings -> Keyboard -> Keyboard Shortcuts -> Modifier Keys -> Swap the keys using their respective dropdown menus
 - Prevent screen from dimming on battery: Settings -> Battery -> Options -> "Slightly dim the display on battery"
+- Prevent automatic sleeping on power adapter when the display is off: Settings -> Battery -> Options -> toggle on "Prevent automatic sleeping on power adapter when the display is off"
 - Stop automatically adjusting brightness: Settings -> Displays -> "Automatically adjust brightness"
 - Turn off keyboard backlighting: Settings -> Keyboards -> "Adjust keyboard brightness in lowlight"
 - Always show scroll bar: Settings -> Appearance -> Show scroll bars -> "Always"
