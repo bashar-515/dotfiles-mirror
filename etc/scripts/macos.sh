@@ -2,11 +2,6 @@
 
 set -euo pipefail
 
-if [ "$EUID" -ne 0 ]; then
-  echo "run this script as root"
-  exit 1
-fi
-
 osascript -e 'tell application "System Settings" to quit'
 
 navigate_desktops_using_ctrl() {
@@ -51,10 +46,10 @@ finder() {
 navigate_desktops_using_ctrl
 
 # slightly dim the display on battery
-pmset -b lessbright 0
+sudo pmset -b lessbright 0
 
 # adjust keyboard brightness in lowlight
-/usr/libexec/PlistBuddy -c "Set :KeyboardBacklight:KeyboardBacklightABEnabled 0" /private/var/root/Library/Preferences/com.apple.CoreBrightness.plist
+sudo /usr/libexec/PlistBuddy -c "Set :KeyboardBacklight:KeyboardBacklightABEnabled 0" /private/var/root/Library/Preferences/com.apple.CoreBrightness.plist
 
 # show scroll bars - always
 defaults write -g AppleShowScrollBars -string "Always"
@@ -63,10 +58,10 @@ defaults write -g AppleShowScrollBars -string "Always"
 defaults write -g AppleScrollerPagingBehavior -bool true
 
 # play sound on startup
-nvram StartupMute=%01
+sudo nvram StartupMute=%01
 
 # prevent automatic sleeping on power adapter when the display is off
-pmset -c sleep 0
+sudo pmset -c sleep 0
 
 # play user interface sound effects
 defaults write -g com.apple.sound.uiaudio.enabled -bool false
