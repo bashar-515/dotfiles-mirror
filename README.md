@@ -1,5 +1,19 @@
 # dotfiles
 
+## Instructions
+
+```
+brew bundle --file=etc/Brewfile
+```
+
+```
+bash etc/scripts/stow.sh
+```
+
+```
+sudo bash etc/scripts/macos.sh
+```
+
 ## Settings
 
 ### System
