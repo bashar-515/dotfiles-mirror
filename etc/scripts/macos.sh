@@ -24,6 +24,9 @@ navigate_desktops_using_ctrl() {
 }
 
 dock() {
+  # automatically rearrange spaces based on most recent use
+  defaults write com.apple.dock mru-spaces -bool false
+  
   # show suggested and recent apps in dock
   defaults write com.apple.dock show-recents -bool false
 
@@ -65,9 +68,6 @@ sudo pmset -c sleep 0
 
 # play user interface sound effects
 defaults write -g com.apple.sound.uiaudio.enabled -bool false
-
-# automatically rearrange spaces based on most recent use
-defaults write com.apple.dock mru-spaces -bool false
 
 dock
 
