@@ -14,4 +14,4 @@ alias cb='cd ~/Developer/Git/Codeberg'
 alias gh='cd ~/Developer/Git/Github'
 alias gl='cd ~/Developer/Git/Gitlab'
 
-alias dot='cd ~/Developer/Git/Github/dotfiles'
+alias dot='cd ~/Developer/Git/Codeberg/dotfiles'

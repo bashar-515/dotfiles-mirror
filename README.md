@@ -11,7 +11,7 @@ bash etc/scripts/stow.sh
 ```
 
 ```
-sudo bash etc/scripts/macos.sh
+bash etc/scripts/macos.sh
 ```
 
 ## Settings
