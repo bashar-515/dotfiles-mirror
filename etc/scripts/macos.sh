@@ -37,10 +37,10 @@ dock() {
 }
 
 finder() {
-  # finder: show path bar
+  # show path bar
   defaults write com.apple.finder ShowPathbar -bool true
 
-  # finder: show status bar
+  # show status bar
   defaults write com.apple.finder ShowStatusBar -bool true
 
   killall Finder
