@@ -9,6 +9,9 @@ insert = "bar"
 normal = "block"
 select = "underline"
 
+[editor.file-picker]
+hidden = false
+
 [keys.insert]
 j = { k = "normal_mode" }
 
