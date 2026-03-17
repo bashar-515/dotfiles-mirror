@@ -13,7 +13,10 @@ autoload -Uz compinit && compinit
 
 maybe_eval starship init zsh
 maybe_eval direnv hook zsh
-maybe_eval fnm env --use-on-cd --shell zsh
+
+export NVM_DIR="$HOME/.nvm"
+maybe_source "/opt/homebrew/opt/nvm/nvm.sh" #This loads nvm
+maybe_source "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 maybe_source "$HOME/.aliases"
 maybe_source "$HOME/.aliases.local"

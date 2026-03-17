@@ -6,7 +6,7 @@ brew "stow"
 brew "tmux"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
-brew "fnm"
+brew "nvm"
 brew "tailscale"
 brew "anomalyco/tap/opencode"
 
