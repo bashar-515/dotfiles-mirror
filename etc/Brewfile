@@ -23,4 +23,7 @@ cask "ableton-live-suite"
 cask "spotify"
 cask "obsidian"
 
+cask "logi-options+"
+cask "logitech-g-hub"
+
 cask "claude-code"
