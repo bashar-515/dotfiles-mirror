@@ -51,9 +51,6 @@ navigate_desktops_using_ctrl
 # slightly dim the display on battery
 sudo pmset -b lessbright 0
 
-# adjust keyboard brightness in lowlight
-sudo /usr/libexec/PlistBuddy -c "Set :KeyboardBacklight:KeyboardBacklightABEnabled 0" /private/var/root/Library/Preferences/com.apple.CoreBrightness.plist
-
 # show scroll bars - always
 defaults write -g AppleShowScrollBars -string "Always"
 
