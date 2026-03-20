@@ -10,6 +10,7 @@ brew "zsh-syntax-highlighting"
 brew "go"
 brew "fnm"
 brew "tailscale"
+brew "worktrunk"
 
 cask "firefox"
 cask "bitwarden"
