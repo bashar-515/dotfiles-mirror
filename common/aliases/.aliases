@@ -33,8 +33,6 @@ ws() {
 _ws() {
   local server="$1" dir="$2" session="$3"
 
-  _t has-session -t "$session" 2>/dev/null && return 0
-
   # session+window 1
   _t new-session -d -s "$session" -c "$dir"
 
