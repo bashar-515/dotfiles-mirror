@@ -12,7 +12,7 @@ alias four='tmux -L four'
 alias oc='opencode'
 
 # directories
-alias gh='cd ~/Developer/Git/Github'
+alias cb='cd ~/Developer/Git/Codeberg'
 
 alias dot='ws -2 hx three ~/Developer/Git/Github/dotfiles dot'
 
@@ -37,6 +37,30 @@ ws() {
 
   _ws "$server" "$dir" "$session" "$cmd1" "$cmd2" "$cmd3" "$cmd4"
   _t attach-session -t "$session"
+}
+
+clad() {
+  local server="${1:-one}"
+
+  local dir name session
+  for dir in ~/Developer/Git/Github/Clad/clad-dashboard*(/); do
+    name="$(basename "$dir")"
+
+    if [[ "$name" == "clad-dashboard" ]]; then
+      session="clad"
+    else
+      session="${name#clad-dashboard_}"
+    fi
+
+    _t has-session -t "$session" 2>/dev/null && continue
+
+    _ws "$server" "$dir" "$session"
+
+    _t send-keys -t "$session:4" "just up && just dev" Enter
+    _t set-hook -t "$session" session-closed "run-shell 'cd $dir && just down'"
+  done
+
+  _t attach-session -t "clad"
 }
 
 _ws() {
