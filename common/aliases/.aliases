@@ -16,3 +16,34 @@ alias cb='cd ~/Developer/Git/Codeberg'
 alias gl='cd ~/Developer/Git/Gitlab'
 
 alias dot='cd ~/Developer/Git/Codeberg/dotfiles'
+
+# ws <server> [dir] [session]
+# e.g. ws one
+# e.g. ws two ~/.files
+# e.g. ws three . dot
+ws() {
+  local server="${1:?Usage: ws <server> [dir] [session]}"
+
+  local dir="${2:-$PWD}"
+  local session="${3:-$(basename "$dir")}"
+
+  local t="command tmux -2 -u -L $server"
+
+  $t has-session -t "$session" 2>/dev/null && return 0
+
+  # session+window 1
+  $t new-session -d -s "$session" -c "$dir"
+
+  # window 2
+  $t new-window -t "$session:2" -c "$dir"
+  $t send-keys -t "$session:2" "command hx" Enter
+
+  # window 3
+  $t new-window -t "$session:3" -c "$dir"
+  $t send-keys -t "$session:3" "command opencode" Enter
+
+  # window 4
+  $t new-window -t "$session:4" -n "server" -c "$dir"
+
+  $t select-window -t "$session:1"
+}
