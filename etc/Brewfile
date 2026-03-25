@@ -10,7 +10,7 @@ brew "zsh-syntax-highlighting"
 brew "go"
 brew "fnm"
 brew "tailscale"
-brew "worktrunk"
+brew "anomalyco/tap/opencode"
 
 cask "firefox"
 cask "bitwarden"
@@ -28,3 +28,4 @@ cask "logi-options+"
 cask "logitech-g-hub"
 
 cask "claude-code"
+cask "raycast"
