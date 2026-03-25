@@ -9,6 +9,8 @@ alias two='tmux -L two'
 alias three='tmux -L three'
 alias four='tmux -L four'
 
+alias oc='opencode'
+
 # directories
 alias cb='cd ~/Developer/Git/Codeberg'
 alias gl='cd ~/Developer/Git/Gitlab'
