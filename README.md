@@ -24,3 +24,4 @@ bash etc/scripts/macos.sh
 
 - Stop adjusting keyboard brightness in low light: Settings -> Keyboard -> toggle off "Adjust keyboard brightness in low light"
 - Turn down keyboard brightness: Settings -> Keyboard -> turn down "Keyboard brightness"
+- Use OPT+SPACE has hotkey for spotlight (to enable CMD+SPACE for Raycast): Settings -> Keyboard -> Keyboard Shortcuts -> Spotlight
