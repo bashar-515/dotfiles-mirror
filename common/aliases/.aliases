@@ -27,30 +27,29 @@ ws() {
   local session="${3:-$(basename "$dir")}"
 
   _ws "$server" "$dir" "$session"
-
-  command tmux -2 -u -L "$server" attach-session -t "$session"
+  _t attach-session -t "$session"
 }
 
 _ws() {
   local server="$1" dir="$2" session="$3"
 
-  t() { command tmux -2 -u -L "$server" "$@"; }
-
-  t has-session -t "$session" 2>/dev/null && return 0
+  _t has-session -t "$session" 2>/dev/null && return 0
 
   # session+window 1
-  t new-session -d -s "$session" -c "$dir"
+  _t new-session -d -s "$session" -c "$dir"
 
   # window 2
-  t new-window -t "$session:2" -c "$dir"
-  t send-keys -t "$session:2" "command hx" Enter
+  _t new-window -t "$session:2" -c "$dir"
+  _t send-keys -t "$session:2" "command hx" Enter
 
   # window 3
-  t new-window -t "$session:3" -c "$dir"
-  t send-keys -t "$session:3" "command opencode" Enter
+  _t new-window -t "$session:3" -c "$dir"
+  _t send-keys -t "$session:3" "command opencode" Enter
 
   # window 4
-  t new-window -t "$session:4" -c "$dir"
+  _t new-window -t "$session:4" -c "$dir"
 
-  t select-window -t "$session:1"
+  _t select-window -t "$session:1"
 }
+
+_t() { command tmux -2 -u -L "$server" "$@"; }
