@@ -12,9 +12,11 @@ alias four='tmux -L four'
 alias oc='opencode'
 
 # directories
-alias cb='cd ~/Developer/Git/Codeberg'
+alias gh='cd ~/Developer/Git/Github'
 
 alias dot='ws -2 hx -3 opencode three ~/Developer/Git/Github/dotfiles dot'
+
+alias clad='cd ~/Developer/Git/Github/Clad/clad-dashboard'
 
 # ws [-1 cmd] [-2 cmd] [-3 cmd] [-4 cmd] <server> [dir] [session]
 ws() {
@@ -39,7 +41,7 @@ ws() {
   _t attach-session -t "$session"
 }
 
-clad() {
+clw() {
   local server="${1:-one}"
 
   local dir name session
