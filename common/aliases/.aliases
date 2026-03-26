@@ -17,35 +17,43 @@ alias gl='cd ~/Developer/Git/Gitlab'
 
 alias dot='ws three ~/Developer/Git/Codeberg/dotfiles dot'
 
-# ws <server> [dir] [session]
-# e.g. ws one
-# e.g. ws two ~/.files
-# e.g. ws three . dot
+# ws [-1 cmd] [-2 cmd] [-3 cmd] [-4 cmd] <server> [dir] [session]
 ws() {
-  local server="${1:?Usage: ws <server> [dir] [session]}"
+  local cmd1="" cmd2="command hx" cmd3="command opencode" cmd4=""
+
+  local OPTIND=1
+  while getopts "1:2:3:4:" opt; do
+    case "$opt" in
+      1) cmd1="$OPTARG" ;;
+      2) cmd2="$OPTARG" ;;
+      3) cmd3="$OPTARG" ;;
+      4) cmd4="$OPTARG" ;;
+    esac
+  done
+  shift $((OPTIND - 1))
+
+  local server="${1:?Usage: ws [-1 cmd] [-2 cmd] [-3 cmd] [-4 cmd] <server> [dir] [session]}"
   local dir="${2:-$PWD}"
   local session="${3:-$(basename "$dir")}"
 
-  _ws "$server" "$dir" "$session"
+  _ws "$server" "$dir" "$session" "$cmd1" "$cmd2" "$cmd3" "$cmd4"
   _t attach-session -t "$session"
 }
 
 _ws() {
   local server="$1" dir="$2" session="$3"
+  local cmds=("$4" "$5" "$6" "$7")
 
-  # session+window 1
-  _t new-session -d -s "$session" -c "$dir"
+  for i in 1 2 3 4; do
+    local cmd="${cmds[$i]}"
 
-  # window 2
-  _t new-window -t "$session:2" -c "$dir"
-  _t send-keys -t "$session:2" "command hx" Enter
-
-  # window 3
-  _t new-window -t "$session:3" -c "$dir"
-  _t send-keys -t "$session:3" "command opencode" Enter
-
-  # window 4
-  _t new-window -t "$session:4" -c "$dir"
+    if [[ $i -eq 1 ]]; then
+      _t new-session -d -s "$session" -c "$dir"
+    else
+      _t new-window -t "$session:$i" -c "$dir"
+    fi
+    [[ -n "$cmd" ]] && _t send-keys -t "$session:$i" "$cmd" Enter
+  done
 
   _t select-window -t "$session:1"
 }
