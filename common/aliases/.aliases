@@ -56,7 +56,7 @@ clw() {
 
     _t has-session -t "$session" 2>/dev/null && continue
 
-    _ws "$server" "$dir" "$session" "" hx opencode "just up && just dev"
+    _ws "$server" "$dir" "$session" "" hx opencode "just dev"
 
     _t set-hook -t "$session" session-closed "run-shell 'cd $dir && just down'"
   done
