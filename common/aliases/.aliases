@@ -15,11 +15,11 @@ alias oc='opencode'
 alias cb='cd ~/Developer/Git/Codeberg'
 alias gl='cd ~/Developer/Git/Gitlab'
 
-alias dot='ws three ~/Developer/Git/Codeberg/dotfiles dot'
+alias dot='ws -2 hx three ~/Developer/Git/Codeberg/dotfiles dot'
 
 # ws [-1 cmd] [-2 cmd] [-3 cmd] [-4 cmd] <server> [dir] [session]
 ws() {
-  local cmd1="" cmd2="command hx" cmd3="command opencode" cmd4=""
+  local cmd1="" cmd2="" cmd3="" cmd4=""
 
   local OPTIND=1
   while getopts "1:2:3:4:" opt; do
