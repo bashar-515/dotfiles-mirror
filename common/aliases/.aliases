@@ -36,8 +36,18 @@ ws() {
   local dir="${2:-$PWD}"
   local session="${3:-$(basename "$dir")}"
 
-  _ws "$server" "$dir" "$session" "$cmd1" "$cmd2" "$cmd3" "$cmd4"
-  _t attach-session -t "$session"
+  if ! _tmux has-session -t "$session" 2>/dev/null; then
+    _ws "$server" "$dir" "$session" "$cmd1" "$cmd2" "$cmd3" "$cmd4"
+  fi
+
+  local wt_dir wt_session
+  for wt_dir in "$dir"/.worktrees/*(/N); do
+    wt_session="$(basename "$wt_dir")"
+    _tmux has-session -t "$wt_session" 2>/dev/null && continue
+    _ws "$server" "$wt_dir" "$wt_session" "$cmd1" "$cmd2" "$cmd3" "$cmd4"
+  done
+
+  _tmux attach-session -t "$session"
 }
 
 _ws() {
