@@ -58,14 +58,14 @@ _ws() {
     local cmd="${cmds[$i]}"
 
     if [[ $i -eq 1 ]]; then
-      _t new-session -d -s "$session" -c "$dir"
+      _tmux new-session -d -s "$session" -c "$dir"
     else
-      _t new-window -t "$session:$i" -c "$dir"
+      _tmux new-window -t "$session:$i" -c "$dir"
     fi
-    [[ -n "$cmd" ]] && _t send-keys -t "$session:$i" "$cmd" Enter
+    [[ -n "$cmd" ]] && _tmux send-keys -t "$session:$i" "$cmd" Enter
   done
 
-  _t select-window -t "$session:1"
+  _tmux select-window -t "$session:1"
 }
 
 _tmux() { command tmux -2 -u -L "$server" "$@"; }
