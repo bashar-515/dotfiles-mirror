@@ -58,4 +58,4 @@ _ws() {
   _t select-window -t "$session:1"
 }
 
-_t() { command tmux -2 -u -L "$server" "$@"; }
+_tmux() { command tmux -2 -u -L "$server" "$@"; }
