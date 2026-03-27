@@ -41,7 +41,7 @@ ws() {
   fi
 
   local wt_dir wt_session
-  for wt_dir in "$dir"/.worktrees/*(/N); do
+  for wt_dir in "$dir".worktrees/*(/N); do
     wt_session="$(basename "$wt_dir")"
     _tmux has-session -t "$wt_session" 2>/dev/null && continue
     _ws "$server" "$wt_dir" "$wt_session" "$cmd1" "$cmd2" "$cmd3" "$cmd4"
