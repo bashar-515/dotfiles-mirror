@@ -13,10 +13,12 @@ alias oc='opencode'
 
 # directories
 alias cb='cd ~/Developer/Git/Codeberg'
-alias gl='cd ~/Developer/Git/Gitlab'
+alias gh='cd ~/Developer/Git/Github'
 alias dot='cd ~/Developer/Git/Codeberg/dotfiles'
 
 alias dotw='ws -2 hx three ~/Developer/Git/Codeberg/dotfiles dot'
+
+alias clw='ws -2 hx -3 claude one ~/Developer/Git/Github/Clad/clad'
 
 # ws [-1 cmd] [-2 cmd] [-3 cmd] [-4 cmd] <server> [dir] [session]
 ws() {
