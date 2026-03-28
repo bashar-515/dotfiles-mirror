@@ -14,8 +14,9 @@ alias oc='opencode'
 # directories
 alias cb='cd ~/Developer/Git/Codeberg'
 alias gl='cd ~/Developer/Git/Gitlab'
+alias dot='cd ~/Developer/Git/Codeberg/dotfiles'
 
-alias dot='ws -2 hx three ~/Developer/Git/Codeberg/dotfiles dot'
+alias dotw='ws -2 hx three ~/Developer/Git/Codeberg/dotfiles dot'
 
 # ws [-1 cmd] [-2 cmd] [-3 cmd] [-4 cmd] <server> [dir] [session]
 ws() {
