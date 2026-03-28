@@ -9,6 +9,8 @@ maybe_source() {
   [ -f "$1" ] && source "$1"
 }
 
+fpath=(/Users/beesho/.docker/completions $fpath)
+
 autoload -Uz compinit && compinit
 
 maybe_eval starship init zsh
