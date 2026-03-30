@@ -18,7 +18,7 @@ alias dot='cd ~/Developer/Git/Codeberg/dotfiles'
 
 alias dotw='ws -2 hx -3 claude three ~/Developer/Git/Codeberg/dotfiles dot'
 
-alias clw='ws -2 hx -3 claude -4 "just up -p" one ~/Developer/Git/Github/Clad/clad'
+alias clw='ws -2 hx -3 claude -4 "just dev -p" one ~/Developer/Git/Github/Clad/clad'
 
 # ws [-1 cmd] [-2 cmd] [-3 cmd] [-4 cmd] <server> [dir] [session]
 ws() {
