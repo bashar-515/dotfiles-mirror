@@ -16,7 +16,7 @@ alias cb='cd ~/Developer/Git/Codeberg'
 alias gh='cd ~/Developer/Git/Github'
 alias dot='cd ~/Developer/Git/Codeberg/dotfiles'
 
-alias dotw='ws -2 hx three ~/Developer/Git/Codeberg/dotfiles dot'
+alias dotw='ws -2 hx -3 claude three ~/Developer/Git/Codeberg/dotfiles dot'
 
 alias clw='ws -2 hx -3 claude one ~/Developer/Git/Github/Clad/clad'
 
