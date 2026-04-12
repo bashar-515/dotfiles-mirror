@@ -25,3 +25,5 @@ maybe_source "/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlightin
 if command -v go >/dev/null 2>&1; then
   export PATH="$(go env GOPATH)/bin:$PATH"
 fi
+
+export EDITOR="hx"
