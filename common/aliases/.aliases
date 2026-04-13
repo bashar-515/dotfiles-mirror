@@ -67,7 +67,7 @@ _ws() {
     [[ -n "$cmd" ]] && _tmux send-keys -t "$session:$i" "$cmd" Enter
   done
 
-  _tmux split-window -h -t "$session:2" -c "$dir" -p 33
+  _tmux split-window -h -t "$session:2" -c "$dir" -p 40
   _tmux select-window -t "$session:1"
 }
 
