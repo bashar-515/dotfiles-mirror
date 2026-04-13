@@ -68,6 +68,8 @@ _ws() {
   done
 
   _tmux split-window -h -t "$session:2" -c "$dir" -p 40
+  _tmux select-pane -t "$session:2.0"
+
   _tmux select-window -t "$session:1"
 }
 
