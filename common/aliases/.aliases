@@ -59,7 +59,7 @@ _ws() {
     local cmd="${cmds[$i]}"
 
     if [[ $i -eq 1 ]]; then
-      _tmux new-session -d -s "$session" -c "$dir"
+      _tmux new-session -d -s "$session" -c "$dir" -x "$(tput cols)" -y "$(tput lines)"
     else
       _tmux new-window -t "$session:$i" -c "$dir"
     fi
