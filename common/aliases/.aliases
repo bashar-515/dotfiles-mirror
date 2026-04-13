@@ -63,9 +63,11 @@ _ws() {
     else
       _tmux new-window -t "$session:$i" -c "$dir"
     fi
+
     [[ -n "$cmd" ]] && _tmux send-keys -t "$session:$i" "$cmd" Enter
   done
 
+  _tmux split-window -h -t "$session:2" -c "$dir" -p 33
   _tmux select-window -t "$session:1"
 }
 
