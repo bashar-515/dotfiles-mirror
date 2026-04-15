@@ -27,3 +27,11 @@ if command -v go >/dev/null 2>&1; then
 fi
 
 export EDITOR="hx"
+
+# pnpm
+export PNPM_HOME="/Users/bashareid/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
