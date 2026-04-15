@@ -28,6 +28,11 @@ fi
 
 export EDITOR="hx"
 
+export PATH="/opt/homebrew/opt/jpeg/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/jpeg/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/jpeg/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/jpeg/lib/pkgconfig"
+
 # pnpm
 export PNPM_HOME="/Users/bashareid/Library/pnpm"
 case ":$PATH:" in
