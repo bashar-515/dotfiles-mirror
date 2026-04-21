@@ -1,3 +1,8 @@
+[language-server.astro-ls]
+command = "astro-ls"
+args = ["--stdio"]
+config = {typescript = {tsdk = "/Users/beesho/Library/pnpm/global/5/node_modules/typescript/lib"}, environment = "node"}
+
 [[language]]
 name = "bash"
 scope = "source.bash"
@@ -66,3 +71,8 @@ shebangs = ["sh", "bash", "dash", "zsh"]
 comment-token = "#"
 language-servers = [ "bash-language-server" ]
 indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "astro"
+auto-format = true
+language-servers = [ "astro-ls" ]
