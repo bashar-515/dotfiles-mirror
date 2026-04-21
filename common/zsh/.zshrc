@@ -29,7 +29,7 @@ fi
 export EDITOR="hx"
 
 # pnpm
-export PNPM_HOME="/Users/bashareid/Library/pnpm"
+export PNPM_HOME="/Users/$(whoami)/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
