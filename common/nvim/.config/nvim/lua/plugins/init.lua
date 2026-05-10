@@ -1,0 +1,26 @@
+function _G.gh(repo)
+    return "https://github.com/" .. repo
+end
+
+require "plugins.theme"
+require "plugins.vim-tmux-navigator"
+require "plugins.nvim-tree"
+require "plugins.nvim-treesitter"
+require "plugins.lualine"
+require "plugins.bufferline"
+require "plugins.indent-blankline"
+require "plugins.fzf-lua"
+require "plugins.vim-maximizer"
+require "plugins.nvim-lint"
+require "plugins.friendly-snippets"
+require "plugins.blink-cmp"
+require "plugins.nvim-lspconfig"
+require "plugins.gitsigns"
+require "plugins.vim-fugitive"
+require "plugins.neoscroll"
+require "plugins.nvim-autopairs"
+require "plugins.nvim-ts-autotag"
+require "plugins.conform"
+require "plugins.comment"
+require "plugins.noice"
+require "plugins.aerial"

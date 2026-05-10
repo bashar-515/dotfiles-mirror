@@ -9,6 +9,7 @@ alias two='tmux -L two'
 alias three='tmux -L three'
 alias four='tmux -L four'
 
+alias nv='nvim'
 alias oc='opencode'
 
 # directories
@@ -18,7 +19,7 @@ alias gl='cd ~/Developer/Git/Gitlab'
 
 alias dot='cd ~/Developer/Git/Codeberg/dotfiles'
 
-alias dotw='ws -1 yazi -2 hx three ~/Developer/Git/Codeberg/dotfiles dot'
+alias dotw='ws -2 "nvim ." -3 claude three ~/Developer/Git/Codeberg/dotfiles dot'
 
 # ws [-1 cmd] [-2 cmd] [-3 cmd] [-4 cmd] <server> [dir] [session]
 ws() {
@@ -69,10 +70,7 @@ _ws() {
     [[ -n "$cmd" ]] && _tmux send-keys -t "$session:$i" "$cmd" Enter
   done
 
-  _tmux split-window -h -t "$session:2" -c "$dir" -p 33
-  _tmux select-pane -t "$session:2.0"
-
-  _tmux select-window -t "$session:1"
+  _tmux select-window -t "$session:2"
 }
 
 _tmux() { command tmux -2 -u -L "$server" "$@"; }

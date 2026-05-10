@@ -26,7 +26,7 @@ if command -v go >/dev/null 2>&1; then
   export PATH="$(go env GOPATH)/bin:$PATH"
 fi
 
-export EDITOR="hx"
+export EDITOR="nvim"
 
 # pnpm
 export PNPM_HOME="/Users/$(whoami)/Library/pnpm"
