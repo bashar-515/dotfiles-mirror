@@ -25,7 +25,7 @@ opt.clipboard:append "unnamedplus"
 opt.splitright = true
 opt.splitbelow = true
 
-opt.scrolloff = 10
+opt.scrolloff = 0
 opt.wrap = false
 opt.undofile = true
 

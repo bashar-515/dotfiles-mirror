@@ -39,6 +39,6 @@ set clipboard+=unnamedplus
 set splitright
 set splitbelow
 
-set scrolloff=8
+set scrolloff=0
 set nowrap
 set undofile
