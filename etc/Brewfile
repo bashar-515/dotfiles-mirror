@@ -1,5 +1,5 @@
 brew "direnv"
-brew "git-delta"
+# brew "git-delta"
 brew "helix"
 brew "starship"
 brew "stow"
@@ -12,6 +12,19 @@ brew "fnm"
 brew "tailscale"
 brew "anomalyco/tap/opencode"
 
+## Neovim ##
+brew "lua-language-server"
+brew "tree-sitter-cli"
+brew "fzf"
+brew "fd"
+brew "rg"
+brew "bat"
+brew "git-delta"
+brew "chafa"
+
+# casks #
+
+## in 'dock order' ##
 cask "firefox"
 cask "bitwarden"
 cask "ghostty"
@@ -25,8 +38,10 @@ cask "ableton-live-suite"
 cask "spotify"
 cask "obsidian"
 
+## not in dock ##
 cask "logi-options+"
 cask "logitech-g-hub"
 
+## not in dock ##
 cask "claude-code"
 cask "raycast"
