@@ -10,6 +10,7 @@ brew "go"
 brew "fnm"
 brew "tailscale"
 brew "anomalyco/tap/opencode"
+brew "llama.cpp"
 
 ## Neovim ##
 brew "lua-language-server"
