@@ -15,3 +15,5 @@ map("n", "<leader>tn", "<cmd>tabn<CR>")
 map("n", "<leader>tp", "<cmd>tabp<CR>")
 map("n", "<leader>tf", "<cmd>tabnew %<CR>")
 map("n", "<leader>ts", "<cmd>tab split<CR>")
+
+map("n", "U", "<C-r>")
