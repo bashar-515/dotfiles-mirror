@@ -35,7 +35,6 @@ cask "notion"
 cask "adobe-creative-cloud"
 cask "ableton-live-suite"
 cask "spotify"
-cask "obsidian"
 
 ## not in dock ##
 cask "logi-options+"
