@@ -19,8 +19,14 @@ lint.linters.oxlint.cmd = function()
   return local_bin ~= "" and local_bin or nil
 end
 
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
+
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
+  group = lint_augroup,
+
   callback = function()
     lint.try_lint()
   end,
+
+  vim.keymap.set("n", "<leader>l", function() lint.try_lint() end)
 })
