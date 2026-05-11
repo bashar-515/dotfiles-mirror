@@ -12,6 +12,7 @@ brew "tailscale"
 brew "llama.cpp"
 brew "gh"
 brew "neovim", args: ["HEAD"]
+# pnpm add -g @earendil-works/pi-coding-agent
 
 ## Neovim ##
 brew "lua-language-server"
@@ -22,6 +23,7 @@ brew "rg"
 brew "bat"
 brew "git-delta"
 brew "chafa"
+# pnpm add -g typescript-language-server typescript
 
 # casks #
 
