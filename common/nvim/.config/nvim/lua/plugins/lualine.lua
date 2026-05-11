@@ -6,5 +6,11 @@ vim.pack.add {
 }
 
 require"lualine".setup {
-  options = { globalstatus = true }
+  options = { globalstatus = true },
+
+  sections = {
+    lualine_c = {
+      { "filename", path = 1 },
+    },
+  },
 }
