@@ -11,6 +11,7 @@ alias four='tmux -L four'
 
 alias nv='nvim'
 alias oc='opencode'
+alias h='command gh'
 
 # directories
 alias cb='cd ~/Developer/Git/Codeberg'
