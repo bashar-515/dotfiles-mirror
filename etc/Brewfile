@@ -9,7 +9,6 @@ brew "zsh-syntax-highlighting"
 brew "go"
 brew "fnm"
 brew "tailscale"
-brew "anomalyco/tap/opencode"
 brew "llama.cpp"
 brew "gh"
 brew "neovim", args: ["HEAD"]
