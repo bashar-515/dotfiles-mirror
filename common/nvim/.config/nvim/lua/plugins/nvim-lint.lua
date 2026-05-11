@@ -27,8 +27,8 @@ local function find_local_bin(relative_path)
   return local_bin ~= "" and local_bin or nil
 end
 
-lint.linters.oxlint.cmd = find_local_bin "node_modules/.bin/oxlint"
-lint.linters.eslint.cmd = find_local_bin "node_modules/.bin/eslint"
+lint.linters.oxlint.cmd = function() return find_local_bin "node_modules/.bin/oxlint" end
+lint.linters.eslint.cmd = function() return find_local_bin "node_modules/.bin/eslint" end
 
 local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
