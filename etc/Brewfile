@@ -11,6 +11,7 @@ brew "fnm"
 brew "tailscale"
 brew "anomalyco/tap/opencode"
 brew "llama.cpp"
+brew "gh"
 
 ## Neovim ##
 brew "lua-language-server"
@@ -36,6 +37,7 @@ cask "notion"
 cask "adobe-creative-cloud"
 cask "ableton-live-suite"
 cask "spotify"
+cask "zed"
 
 ## not in dock ##
 cask "logi-options+"
