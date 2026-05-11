@@ -7,6 +7,10 @@ local capabilities = require"blink.cmp".get_lsp_capabilities()
 lsp.config("lua_ls", { capabilities = capabilities })
 lsp.enable "lua_ls"
 
+-- pnpm install -g typescript-language-server typescript
+lsp.config("ts_ls", { capabilities = capabilities })
+lsp.enable "ts_ls"
+
 local map = vim.keymap.set
 
 local diagnostic = vim.diagnostic
