@@ -7,6 +7,14 @@ local fts_by_linter = {
     "javascriptreact",  -- React, Solid, Qwik, Preact, Lit, Alptine.js (Next.js, Nuxt, Remix, TanStack Start, React Router, React Native)
     "typescriptreact",
     "vue",
+  },
+
+  eslint = {
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "vue",
   }
 }
 
@@ -14,10 +22,13 @@ local lint = require"lint"
 
 lint.linters_by_ft = require"util".invert_index(fts_by_linter)
 
-lint.linters.oxlint.cmd = function()
-  local local_bin = vim.fn.findfile("node_modules/oxlint/bin/oxlint", vim.fn.getcwd() .. ";")
-  return local_bin ~= "" and local_bin or nil
+local function find_local_bin(relative_path)
+  local local_bin = vim.fn.findfile(relative_path, vim.fn.getcwd() .. ";")
+  return local_bin ~= "" and local_bin or nil 
 end
+
+lint.linters.oxlint.cmd = function() find_local_bin "node_modules/oxlint/bin/oxlint" end
+lint.linters.eslint.cmd = function() find_local_bin "node_modules/oxlint/bin/eslint" end
 
 local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
