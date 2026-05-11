@@ -12,6 +12,7 @@ brew "tailscale"
 brew "anomalyco/tap/opencode"
 brew "llama.cpp"
 brew "gh"
+brew "neovim", args: ["HEAD"]
 
 ## Neovim ##
 brew "lua-language-server"
@@ -31,7 +32,7 @@ cask "bitwarden"
 cask "ghostty"
 cask "dbeaver-community"
 cask "docker-desktop"
-cask "linear-linear"
+cask "linear"
 cask "google-chrome"
 cask "notion"
 cask "adobe-creative-cloud"
@@ -44,5 +45,5 @@ cask "logi-options+"
 cask "logitech-g-hub"
 
 ## not in dock ##
-cask "claude-code"
+cask "claude-code@latest"
 cask "raycast"
