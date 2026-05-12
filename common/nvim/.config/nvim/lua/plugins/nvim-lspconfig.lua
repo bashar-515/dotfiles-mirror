@@ -41,8 +41,8 @@ api.nvim_create_autocmd("LspAttach", {
 		map("n", "gT", "<cmd>FzfLua lsp_typedefs<CR>", opts)
 		map("n", "<leader>rn", buf.rename, opts)
 		map({ "n", "v" }, "<leader>ca", buf.code_action, opts)
-		map("n", "gr", buf.references, opts)
-		map("n", "gR", "<cmd>FzfLua lsp_references<CR>", opts)
+		-- map("n", "gr", buf.references, opts)
+		map("n", "gr", "<cmd>FzfLua lsp_references<CR>", opts)
   end
 })
 
