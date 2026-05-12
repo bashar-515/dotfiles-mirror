@@ -17,3 +17,5 @@ map("n", "<leader>tf", "<cmd>tabnew %<CR>")
 map("n", "<leader>ts", "<cmd>tab split<CR>")
 
 map("n", "U", "<C-r>")
+
+map({"n", "x", "o"}, "mm", "%", { remap = true })
