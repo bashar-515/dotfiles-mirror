@@ -27,6 +27,7 @@ if command -v go >/dev/null 2>&1; then
 fi
 
 export EDITOR="nvim"
+export LESS="--mouse"
 
 # pnpm
 export PNPM_HOME="/Users/$(whoami)/Library/pnpm"
