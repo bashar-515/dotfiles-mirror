@@ -25,6 +25,8 @@ fl.setup {
   grep = { rg_opts = "--hidden -g '!.git/' " .. fl.defaults.grep.rg_opts }
 }
 
+fl.register_ui_select()
+
 local map = vim.keymap.set
 
 map("n", "<leader>ff", "<cmd>FzfLua files<CR>")
