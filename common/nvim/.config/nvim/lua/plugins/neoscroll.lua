@@ -1,21 +1,39 @@
-vim.pack.add { gh "karb94/neoscroll.nvim" }
+vim.pack.add({ gh("karb94/neoscroll.nvim") })
 
-local neoscroll = require"neoscroll"
+local neoscroll = require("neoscroll")
 
-neoscroll.setup {
-  mappings = {},
+neoscroll.setup({
+	mappings = {},
 
-  respect_scrolloff = false,
-  stop_eof = false,
-  cursor_scrolls_alone = false,
+	respect_scrolloff = false,
+	stop_eof = false,
+	cursor_scrolls_alone = false,
 
-  pre_hook  = function() vim.wo.scrolloff = 0 end,
-  post_hook = function() vim.wo.scrolloff = 10 end,
-}
+	pre_hook = function()
+		vim.wo.scrolloff = 0
+	end,
+	post_hook = function()
+		vim.wo.scrolloff = 10
+	end,
+})
 
 local map = vim.keymap.set
 
 local modes = { "n", "v", "x" }
 
-map(modes, "<C-p>", function() neoscroll.scroll(-0.25, { move_cursor=true; duration = 250 }) end)
-map(modes, "<C-n>", function() neoscroll.scroll(0.25, { move_cursor=true; duration = 250 }) end)
+map(modes, "<C-p>", function()
+	neoscroll.scroll(-0.25, { move_cursor = true, duration = 250 })
+end)
+map(modes, "<C-n>", function()
+	neoscroll.scroll(0.25, { move_cursor = true, duration = 250 })
+end)
+
+map(modes, "zz", function()
+	neoscroll.zz({ half_win_duration = 500 })
+end)
+map(modes, "zt", function()
+	neoscroll.zt({ half_win_duration = 500 })
+end)
+map(modes, "zb", function()
+	neoscroll.zb({ half_win_duration = 500 })
+end)
