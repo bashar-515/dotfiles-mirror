@@ -11,6 +11,10 @@ lsp.enable "lua_ls"
 lsp.config("ts_ls", { capabilities = capabilities })
 lsp.enable "ts_ls"
 
+-- go install github.com/docker/docker-language-server/cmd/docker-language-server@latest
+lsp.config("docker_language_server", { capabilities = capabilities })
+lsp.enable "docker_language_server"
+
 local map = vim.keymap.set
 
 local diagnostic = vim.diagnostic

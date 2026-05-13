@@ -23,8 +23,12 @@ local fts_by_formatter = {
 local conform = require "conform"
 local util = require "conform.util"
 
+local formatters_by_ft = require"util".invert_index(fts_by_formatter)
+
+formatters_by_ft.dockerfile = { lsp_format = "last" }
+
 conform.setup {
-  formatters_by_ft = require"util".invert_index(fts_by_formatter),
+  formatters_by_ft = formatters_by_ft,
 
   formatters = {
     oxfmt = {
