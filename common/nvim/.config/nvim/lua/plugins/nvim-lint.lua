@@ -38,7 +38,10 @@ local function available_for(ft)
 	local available = {}
 	for _, name in ipairs(lint.linters_by_ft[ft] or {}) do
 		local linter = lint.linters[name]
-		local cmd = type(linter.cmd) == "function" and linter.cmd() or linter.cmd
+		local cmd = linter.cmd
+		if type(cmd) == "function" then
+			cmd = cmd()
+		end
 		if cmd then
 			table.insert(available, name)
 		end
@@ -56,6 +59,6 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
 	end,
 
 	vim.keymap.set("n", "<leader>l", function()
-		lint.try_lint(vim.bo.filetype)
+		lint.try_lint(available_for(vim.bo.filetype))
 	end),
 })
