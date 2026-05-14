@@ -52,19 +52,17 @@ local formatters_by_ft = require("util").invert_index(fts_by_formatter)
 local function is_direct_dep(pkg)
 	return function(_, ctx)
 		local start = ctx.filename and vim.fs.dirname(ctx.filename) or vim.uv.cwd()
-		local pkg_json = vim.fs.find("package.json", { upward = true, path = start })[1]
-		if not pkg_json then
-			return false
-		end
-		local ok, data = pcall(function()
-			return vim.json.decode(table.concat(vim.fn.readfile(pkg_json), "\n"))
-		end)
-		if not ok or type(data) ~= "table" then
-			return false
-		end
-		for _, field in ipairs({ "dependencies", "devDependencies", "peerDependencies", "optionalDependencies" }) do
-			if data[field] and data[field][pkg] then
-				return true
+		local pkg_jsons = vim.fs.find("package.json", { upward = true, path = start, limit = math.huge })
+		for _, pkg_json in ipairs(pkg_jsons) do
+			local ok, data = pcall(function()
+				return vim.json.decode(table.concat(vim.fn.readfile(pkg_json), "\n"))
+			end)
+			if ok and type(data) == "table" then
+				for _, field in ipairs({ "dependencies", "devDependencies", "peerDependencies", "optionalDependencies" }) do
+					if data[field] and data[field][pkg] then
+						return true
+					end
+				end
 			end
 		end
 		return false
