@@ -7,23 +7,24 @@
 -- [x] brew install git-delta
 -- [ ] brew install jj
 -- [x] brew install chafa
-vim.pack.add {
-  -- deps.
-  gh "nvim-tree/nvim-web-devicons",
+vim.pack.add({
+	-- deps.
+	gh("nvim-tree/nvim-web-devicons"),
 
-  -- OPTIONAL
-  -- gh "mfussenegger/nvim-dap",
-  gh "nvim-treesitter/nvim-treesitter-context",
-  gh "meanderingprogrammer/render-markdown.nvim",
+	-- OPTIONAL
+	-- gh "mfussenegger/nvim-dap",
+	gh("nvim-treesitter/nvim-treesitter-context"),
+	gh("meanderingprogrammer/render-markdown.nvim"),
 
-  gh "ibhagwan/fzf-lua",
-}
+	gh("ibhagwan/fzf-lua"),
+})
 
-local fl = require"fzf-lua"
+local fl = require("fzf-lua")
 
-fl.setup {
-  grep = { rg_opts = "--hidden -g '!.git/' " .. fl.defaults.grep.rg_opts }
-}
+fl.setup({
+	fzf_opts = { ["--cycle"] = true },
+	grep = { rg_opts = "--hidden -g '!.git/' " .. fl.defaults.grep.rg_opts },
+})
 
 fl.register_ui_select()
 
@@ -32,4 +33,6 @@ local map = vim.keymap.set
 map("n", "<leader>ff", "<cmd>FzfLua files<CR>")
 map("n", "<leader>/", "<cmd>FzfLua live_grep<CR>")
 
-map("n", "<leader>rm", function() require"render-markdown".toggle() end)
+map("n", "<leader>rm", function()
+	require("render-markdown").toggle()
+end)
