@@ -18,4 +18,8 @@ map("n", "<leader>ts", "<cmd>tab split<CR>")
 
 map("n", "U", "<C-r>")
 
-map({"n", "x", "o"}, "mm", "%", { remap = true })
+map({ "n", "x", "o" }, "mm", "%", { remap = true })
+
+map({ "n" }, "<leader>cp", function()
+	vim.fn.setreg("+", vim.fn.expand("%"))
+end)
