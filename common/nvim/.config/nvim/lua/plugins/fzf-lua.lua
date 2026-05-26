@@ -28,11 +28,15 @@ fl.setup({
 
 fl.register_ui_select()
 
+local rm = require("render-markdown")
+
+rm.setup({ enabled = false })
+
 local map = vim.keymap.set
 
 map("n", "<leader>ff", "<cmd>FzfLua files<CR>")
 map("n", "<leader>/", "<cmd>FzfLua live_grep<CR>")
 
 map("n", "<leader>rm", function()
-	require("render-markdown").toggle()
+	rm.toggle()
 end)
