@@ -19,6 +19,10 @@ lsp.enable("docker_language_server")
 lsp.config("prismals", { capabilities = capabilities })
 lsp.enable("prismals")
 
+-- npm install -g @astrojs/language-server
+lsp.config("astro", { capabilities = capabilities })
+lsp.enable("astro")
+
 local map = vim.keymap.set
 
 local diagnostic = vim.diagnostic

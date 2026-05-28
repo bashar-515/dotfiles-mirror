@@ -37,6 +37,7 @@ local fts_by_formatter = {
 		"markdown",
 		"mdx",
 		"yaml",
+		"astro",
 	},
 
 	stylua = {
