@@ -11,12 +11,11 @@ alias four='tmux -L four'
 
 alias nv='nvim'
 alias oc='opencode'
-alias h='command gh'
 
 # directories
-alias cb='cd ~/Developer/Git/Codeberg'
-alias gh='cd ~/Developer/Git/Github'
-alias gl='cd ~/Developer/Git/Gitlab'
+alias berg='cd ~/Developer/Git/Codeberg'
+alias hub='cd ~/Developer/Git/Github'
+alias lab='cd ~/Developer/Git/Gitlab'
 
 alias dot='cd ~/Developer/Git/Codeberg/dotfiles'
 
