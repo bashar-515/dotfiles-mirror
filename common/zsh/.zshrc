@@ -15,6 +15,7 @@ autoload -Uz compinit && compinit
 
 maybe_eval starship init zsh
 maybe_eval direnv hook zsh
+maybe_eval fnm env --use-on-cd --shell zsh
 
 maybe_source "$HOME/.zshrc.local"
 
