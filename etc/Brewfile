@@ -51,3 +51,4 @@ cask "logitech-g-hub"
 ## not in dock ##
 cask "claude-code@latest"
 cask "raycast"
+cask "zoom"
