@@ -1,5 +1,5 @@
 brew "direnv"
-brew "git-delta"
+# brew "git-delta"
 brew "starship"
 brew "stow"
 brew "tmux"
