@@ -23,6 +23,18 @@ lsp.enable("prismals")
 lsp.config("astro", { capabilities = capabilities })
 lsp.enable("astro")
 
+-- brew install gopls
+lsp.config("gopls", {
+	capabilities = capabilities,
+	settings = {
+		gopls = {
+			staticcheck = true,
+			analyses = { unusedparams = true },
+		},
+	},
+})
+lsp.enable("gopls")
+
 local map = vim.keymap.set
 
 local diagnostic = vim.diagnostic

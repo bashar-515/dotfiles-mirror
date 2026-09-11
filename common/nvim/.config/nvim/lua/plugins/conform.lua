@@ -43,6 +43,14 @@ local fts_by_formatter = {
 	stylua = {
 		"lua",
 	},
+
+	goimports = {
+		"go",
+	},
+
+	gofumpt = {
+		"go",
+	},
 }
 
 local conform = require("conform")
