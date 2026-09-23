@@ -104,4 +104,6 @@ conform.setup({
 	},
 })
 
-vim.keymap.set({ "n", "v" }, "<leader>f", conform.format)
+vim.keymap.set({ "n", "v" }, "<leader>f", function()
+	conform.format({ async = true })
+end)
