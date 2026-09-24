@@ -1,3 +1,4 @@
 theme = Dark+
 background-opacity = 0.93
 font-size = 16
+keybind = cmd+enter=unbind
