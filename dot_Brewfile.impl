@@ -7,7 +7,13 @@ brew "uv"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 brew "go"
+
+{{- if eq .profile "personal" -}}
+
 brew "fnm"
+
+{{- end}}
+
 brew "tailscale"
 brew "llama.cpp"
 brew "gh"
