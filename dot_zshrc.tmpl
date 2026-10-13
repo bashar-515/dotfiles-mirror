@@ -9,18 +9,26 @@ maybe_source() {
   [ -f "$1" ] && source "$1"
 }
 
-fpath=(/Users/beesho/.docker/completions $fpath)
+fpath=($HOME/.docker/completions $fpath)
 
 autoload -Uz compinit && compinit
 
 maybe_eval starship init zsh
 maybe_eval direnv hook zsh
+
+{{- if eq .profile "clad" -}}
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+{{- else}}
+
 maybe_eval fnm env --use-on-cd --shell zsh
 
-maybe_source "$HOME/.zshrc.local"
+{{- end }}
 
 maybe_source "$HOME/.aliases"
-maybe_source "$HOME/.aliases.local"
 maybe_source "/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 maybe_source "/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
@@ -34,7 +42,7 @@ export EDITOR="nvim"
 export LESS="--mouse"
 
 # pnpm
-export PNPM_HOME="/Users/bashareid/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME/bin:"*) ;;
   *) export PATH="$PNPM_HOME/bin:$PATH" ;;
