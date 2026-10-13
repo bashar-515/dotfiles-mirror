@@ -74,3 +74,13 @@ _ws() {
 }
 
 _tmux() { command tmux -2 -u -L "$server" "$@"; }
+
+{{- if eq .profile "clad" }}
+
+alias clad='cd ~/Developer/Git/Github/Clad/clad'
+alias clw='ws -2 "nvim ." -3 claude -4 "just up && just dev -p" one ~/Developer/Git/Github/Clad/clad'
+alias clp='ws -2 "nvim ." -3 claude one ~/Developer/Git/Github/Clad/clad-apps clp'
+alias clpf='ws -2 "nvim ." -3 claude -4 "cd apps/forecast && pnpm install --frozen-lockfile && CLAD_HOST=http://clad.localhost:1355 pnpm run dev" one
+~/Developer/Git/Github/Clad/clad-apps clpf'
+
+{{- end }}
