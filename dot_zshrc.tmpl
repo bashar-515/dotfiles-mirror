@@ -16,13 +16,13 @@ autoload -Uz compinit && compinit
 maybe_eval starship init zsh
 maybe_eval direnv hook zsh
 
-{{- if eq .profile "clad" -}}
+{{- if eq .profile "clad" }}
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-{{- else}}
+{{- else }}
 
 maybe_eval fnm env --use-on-cd --shell zsh
 
