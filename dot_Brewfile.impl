@@ -1,7 +1,6 @@
 brew "direnv"
 # brew "git-delta"
 brew "starship"
-brew "stow"
 brew "tmux"
 brew "uv"
 brew "zsh-autosuggestions"
@@ -41,10 +40,16 @@ brew "gofumpt"
 
 ## in 'dock order' ##
 cask "firefox"
-cask "bitwarden"
+cask "nordpass"
 cask "ghostty"
 cask "dbeaver-community"
+
+{{- if eq .profile "clad" }}
+
 cask "docker-desktop"
+
+{{- end  }}
+
 cask "linear"
 cask "google-chrome"
 cask "notion"
