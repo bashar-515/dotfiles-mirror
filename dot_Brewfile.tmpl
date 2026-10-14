@@ -6,13 +6,7 @@ brew "uv"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 brew "go"
-
-{{- if eq .profile "personal" }}
-
-brew "fnm"
-
-{{- end}}
-
+{{ if eq .profile "personal" }}brew "fnm"{{ end }}
 brew "tailscale"
 brew "llama.cpp"
 brew "gh"
@@ -43,13 +37,7 @@ cask "firefox"
 cask "nordpass"
 cask "ghostty"
 cask "dbeaver-community"
-
-{{- if eq .profile "clad" }}
-
-cask "docker-desktop"
-
-{{- end  }}
-
+{{ if eq .profile "clad" }}cask "docker-desktop"{{ end  }}
 cask "linear"
 cask "google-chrome"
 cask "notion"
@@ -64,4 +52,4 @@ cask "logitech-g-hub"
 ## not in dock ##
 cask "claude-code@latest"
 cask "raycast"
-cask "zoom"
+{{ if eq .profile "personal" }}cask "zoom"{{ end }}

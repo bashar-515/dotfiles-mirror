@@ -3,15 +3,11 @@
 ## Instructions
 
 ```
-brew bundle --file=etc/Brewfile
+brew install chezmoi
 ```
 
 ```
-bash etc/scripts/stow.sh
-```
-
-```
-bash etc/scripts/macos.sh
+chezmoi init --apply https://codeberg.org/bashar-515/dotfiles.git
 ```
 
 ## Settings
