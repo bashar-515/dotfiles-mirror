@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# {{ include "dot_Brewfile.tmpl" | sha256sum }}
+# {{ include "dot_config/mise/config.toml" | sha256sum }}
+
+set -euo pipefail
+
+brew bundle --global
+brew bundle cleanup --global --force
+brew autoremove
+
+mise install --yes
+mise prune --yes
