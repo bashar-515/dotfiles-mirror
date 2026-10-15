@@ -36,8 +36,9 @@ diagnostic.config({
 })
 
 map("n", "<leader>d", diagnostic.open_float)
-map("n", "[d", diagnostic.goto_prev)
-map("n", "]d", diagnostic.goto_next)
+
+map("n", "[d", function() diagnostic.jump({ count = -1, float = true }) end)
+map("n", "]d", function() diagnostic.jump({ count = 1, float = true }) end)
 
 local api = vim.api
 
