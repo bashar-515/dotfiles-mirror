@@ -4,7 +4,10 @@
 
 ```
 brew install chezmoi
+brew install --cask 1password
 ```
+
+Enable 1Password's SSH Agent and CLI integration.
 
 ```
 chezmoi init --apply https://codeberg.org/bashar-515/dotfiles.git
@@ -20,4 +23,4 @@ chezmoi init --apply https://codeberg.org/bashar-515/dotfiles.git
 
 - Stop adjusting keyboard brightness in low light: Settings -> Keyboard -> toggle off "Adjust keyboard brightness in low light"
 - Turn down keyboard brightness: Settings -> Keyboard -> turn down "Keyboard brightness"
-- Use OPT+SPACE has hotkey for spotlight (to enable CMD+SPACE for Raycast): Settings -> Keyboard -> Keyboard Shortcuts -> Spotlight
+- Use OPT+SPACE as hotkey for spotlight (to enable CMD+SPACE for Raycast): Settings -> Keyboard -> Keyboard Shortcuts -> Spotlight

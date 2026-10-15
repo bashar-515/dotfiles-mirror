@@ -6,3 +6,7 @@
 profile = {{ $profile | quote }}
 name = {{ $name | quote }}
 email = {{ $email | quote }}
+
+[hooks.read-source-state.pre]
+command = "sh"
+args = ["-c", "type op >/dev/null 2>&1 || brew install --cask 1password-cli"]
