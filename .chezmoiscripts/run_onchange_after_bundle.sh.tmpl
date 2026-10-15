@@ -5,8 +5,7 @@
 
 set -euo pipefail
 
-brew bundle --global
-brew bundle cleanup --global --force
+brew bundle install --global --cleanup
 brew autoremove
 
 mise install --yes
