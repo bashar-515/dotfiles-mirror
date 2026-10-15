@@ -13,6 +13,7 @@ fpath=($HOME/.docker/completions $fpath)
 
 autoload -Uz compinit && compinit
 
+maybe_eval mise activate zsh
 maybe_eval starship init zsh
 
 {{- if eq .profile "clad" }}
