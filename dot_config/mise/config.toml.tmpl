@@ -2,3 +2,5 @@
 starship = "latest"
 tmux = "latest"
 node = "lts"
+
+{{ if eq .profile "clad" }}"llama.cpp" = "latest"{{ end }}
