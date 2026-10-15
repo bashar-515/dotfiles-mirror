@@ -24,6 +24,16 @@ local fl = require("fzf-lua")
 fl.setup({
 	fzf_opts = { ["--cycle"] = true },
 	grep = { rg_opts = "--hidden -g '!.git/' " .. fl.defaults.grep.rg_opts },
+	previewers = {
+		builtin = {
+			extensions = {
+				["png"] = { "chafa", "{file}" },
+				["jpg"] = { "chafa", "{file}" },
+				["gif"] = { "chafa", "{file}" },
+				["webp"] = { "chafa", "{file}" },
+			},
+		},
+	},
 })
 
 fl.register_ui_select()
