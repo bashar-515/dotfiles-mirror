@@ -41,6 +41,12 @@ cask "logitech-g-hub"
 
 {{- if eq .profile "clad" }}
 
+brew "just"
+
+brew "dopplerhq/cli/doppler"
+brew "poppler"
+brew "qpdf"
+
 cask "docker-desktop"
 
 {{- else }}
