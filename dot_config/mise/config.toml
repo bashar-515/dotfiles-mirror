@@ -1,2 +1,3 @@
 [tools]
 starship = "latest"
+tmux = "latest"
