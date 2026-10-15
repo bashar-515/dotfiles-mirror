@@ -14,7 +14,6 @@ fpath=($HOME/.docker/completions $fpath)
 autoload -Uz compinit && compinit
 
 maybe_eval starship init zsh
-maybe_eval direnv hook zsh
 
 {{- if eq .profile "clad" }}
 
