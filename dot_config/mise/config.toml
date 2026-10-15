@@ -1,3 +1,4 @@
 [tools]
 starship = "latest"
 tmux = "latest"
+node = "lts"

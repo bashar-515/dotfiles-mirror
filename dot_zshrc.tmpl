@@ -16,18 +16,6 @@ autoload -Uz compinit && compinit
 maybe_eval mise activate zsh
 maybe_eval starship init zsh
 
-{{- if eq .profile "clad" }}
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-{{- else }}
-
-maybe_eval fnm env --use-on-cd --shell zsh
-
-{{- end }}
-
 maybe_source "$HOME/.aliases"
 maybe_source "/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 maybe_source "/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
