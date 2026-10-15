@@ -3,37 +3,29 @@ vim.pack.add({ gh("neovim/nvim-lspconfig") })
 local lsp = vim.lsp
 local capabilities = require("blink.cmp").get_lsp_capabilities()
 
--- brew install lua-language-server
-lsp.config("lua_ls", { capabilities = capabilities })
-lsp.enable("lua_ls")
-
--- pnpm install -g typescript-language-server typescript
-lsp.config("ts_ls", { capabilities = capabilities })
-lsp.enable("ts_ls")
-
--- go install github.com/docker/docker-language-server/cmd/docker-language-server@latest
-lsp.config("docker_language_server", { capabilities = capabilities })
-lsp.enable("docker_language_server")
-
--- pnpm add -g @prisma/language-server
-lsp.config("prismals", { capabilities = capabilities })
-lsp.enable("prismals")
-
--- npm install -g @astrojs/language-server
+-- -g @astrojs/language-server: npm
 lsp.config("astro", { capabilities = capabilities })
 lsp.enable("astro")
 
--- brew install gopls
-lsp.config("gopls", {
-	capabilities = capabilities,
-	settings = {
-		gopls = {
-			staticcheck = true,
-			analyses = { unusedparams = true },
-		},
-	},
-})
-lsp.enable("gopls")
+-- github.com/docker/docker-language-server/cmd/docker-language-server@latest: mise
+lsp.config("docker_language_server", { capabilities = capabilities })
+lsp.enable("docker_language_server")
+
+-- lua-language-server: mise
+lsp.config("lua_ls", { capabilities = capabilities })
+lsp.enable("lua_ls")
+
+-- @prisma/language-server: npm
+lsp.config("prismals", { capabilities = capabilities })
+lsp.enable("prismals")
+
+-- @tailwindcss/language-server: npm
+lsp.config("tailwindcss", { capabilities = capabilities })
+lsp.enable("tailwindcss")
+
+-- typescript-language-server typescript: npm
+lsp.config("ts_ls", { capabilities = capabilities })
+lsp.enable("ts_ls")
 
 local map = vim.keymap.set
 

@@ -1,12 +1,12 @@
--- brew install fzf
+-- fzf - mise
 --
 -- OPTIONAL
--- [x] brew install fd
--- [x] brew install rg
--- [x] brew install bat
--- [x] brew install git-delta
--- [ ] brew install jj
--- [x] brew install chafa
+-- [x] fd: mise
+-- [x] rg: mise
+-- [x] bat: mise
+-- [x] git-delta: mise
+-- [ ] jj
+-- [x] chafa: brew
 vim.pack.add({
 	-- deps.
 	gh("nvim-tree/nvim-web-devicons"),
