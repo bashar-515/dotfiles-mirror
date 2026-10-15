@@ -3,15 +3,15 @@ vim.pack.add({ gh("neovim/nvim-lspconfig") })
 local lsp = vim.lsp
 local capabilities = require("blink.cmp").get_lsp_capabilities()
 
--- -g @astrojs/language-server: npm
+-- @astrojs/language-server: npm
 lsp.config("astro", { capabilities = capabilities })
 lsp.enable("astro")
 
--- github.com/docker/docker-language-server/cmd/docker-language-server@latest: mise
+-- github.com/docker/docker-language-server: mise
 lsp.config("docker_language_server", { capabilities = capabilities })
 lsp.enable("docker_language_server")
 
--- lua-language-server: mise
+-- lua-language-server: brew
 lsp.config("lua_ls", { capabilities = capabilities })
 lsp.enable("lua_ls")
 

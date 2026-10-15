@@ -1,10 +1,10 @@
--- fzf - mise
+-- fzf: brew
 --
 -- OPTIONAL
--- [x] fd: mise
--- [x] rg: mise
--- [x] bat: mise
--- [x] git-delta: mise
+-- [x] fd: brew
+-- [x] ripgrep: brew
+-- [x] bat: brew
+-- [x] git-delta: brew
 -- [ ] jj
 -- [x] chafa: brew
 vim.pack.add({

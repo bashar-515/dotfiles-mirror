@@ -1,24 +1,10 @@
 [tools]
-"llama.cpp" = "latest"
-
-gh = "latest"
 node = "lts"
 pnpm = "latest"
-starship = "latest"
-tmux = "latest"
 
 "npm:@earendil-works/pi-coding-agent" = "latest"
-"npm:portless" = "latest"
 
-bat = "latest"
-delta = "latest"
-fd = "latest"
-fzf = "latest"
-lua-language-server = "latest"
-neovim = "latest"
-rg = "latest"
-stylua = "latest"
-tree-sitter = "latest"
+"npm:portless" = "latest"
 
 "npm:@astrojs/language-server" = "latest"
 "npm:@prisma/language-server" = "latest"
