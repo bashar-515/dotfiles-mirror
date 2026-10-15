@@ -2,5 +2,10 @@
 starship = "latest"
 tmux = "latest"
 node = "lts"
+gh = "latest"
 
-{{ if eq .profile "clad" }}"llama.cpp" = "latest"{{ end }}
+{{- if eq .profile "clad" }}
+
+"llama.cpp" = "latest"
+
+{{- end }}
