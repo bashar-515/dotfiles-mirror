@@ -20,6 +20,10 @@
       "rev": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3",
       "src": "https://github.com/akinsho/bufferline.nvim"
     },
+    "chezmoi.vim": {
+      "rev": "7a498ea65f658993237fb0469001bdf71f68cf94",
+      "src": "https://github.com/alker0/chezmoi.vim"
+    },
     "comment.nvim": {
       "rev": "e30b7f2008e52442154b66f7c519bfd2f1e32acb",
       "src": "https://github.com/numtostr/comment.nvim"
