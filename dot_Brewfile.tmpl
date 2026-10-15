@@ -4,22 +4,13 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
 brew "tailscale"
-# pnpm add -g @earendil-works/pi-coding-agent
 
-## Neovim ##
 brew "chafa"
-# pnpm add -g typescript-language-server typescript
-# pnpm add -g @prisma/language-server
-# npm install -g @astrojs/language-server
 
-# casks #
-
-## in 'dock order' ##
 cask "firefox"
-cask "nordpass"
+cask "1password"
 cask "ghostty"
 cask "dbeaver-community"
-{{ if eq .profile "clad" }}cask "docker-desktop"{{ end }}
 cask "linear"
 cask "google-chrome"
 cask "notion"
@@ -27,11 +18,18 @@ cask "adobe-creative-cloud"
 cask "ableton-live-suite"
 cask "spotify"
 
-## not in dock ##
+cask "claude-code@latest"
+cask "raycast"
+
 cask "logi-options+"
 cask "logitech-g-hub"
 
-## not in dock ##
-cask "claude-code@latest"
-cask "raycast"
-{{ if eq .profile "personal" }}cask "zoom"{{ end }}
+{{- if eq .profile "clad" }}
+
+cask "docker-desktop"
+
+{{- else }}
+
+cask "zoom"
+
+{{- end}}

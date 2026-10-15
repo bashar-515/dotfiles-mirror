@@ -1,0 +1,30 @@
+[tools]
+starship = "latest"
+tmux = "latest"
+gh = "latest"
+node = "lts"
+
+"npm:@earendil-works/pi-coding-agent" = "latest"
+
+
+neovim = "latest"
+stylua = "latest"
+lua-language-server = "latest"
+tree-sitter = "latest"
+fzf = "latest"
+fd = "latest"
+rg = "latest"
+bat = "latest"
+delta = "latest"
+
+"npm:typescript" = "latest"
+"npm:typescript-language-server" = "latest"
+"npm:@prisma/language-server" = "latest"
+"npm:@astrojs/language-server" = "latest"
+
+
+{{- if eq .profile "clad" }}
+
+"llama.cpp" = "latest"
+
+{{- end }}
