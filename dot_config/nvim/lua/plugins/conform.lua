@@ -1,55 +1,59 @@
 vim.pack.add({ gh("stevearc/conform.nvim") })
 
 local fts_by_formatter = {
-	oxfmt = {
-		"javascript",
-		"typescript",
-		"javascriptreact",
-		"typescriptreact",
-		"vue",
-		"css",
-		"scss",
-		"html",
-		"json",
-		"jsonc",
-		"yaml",
-		"markdown",
-		"graphql",
-		"toml",
-		"less",
+	["clang-format"] = {
+		"c",
 	},
 
-	prettier = {
-		"javascript",
-		"typescript",
-		"javascriptreact",
-		"typescriptreact",
-		"htmlangular",
-		"vue",
-		"css",
-		"less",
-		"scss",
-		"html",
-		"handlebars",
-		"json",
-		"jsonc",
-		"graphql",
-		"markdown",
-		"mdx",
-		"yaml",
-		"astro",
-	},
-
-	stylua = {
-		"lua",
+	gofumpt = {
+		"go",
 	},
 
 	goimports = {
 		"go",
 	},
 
-	gofumpt = {
-		"go",
+	oxfmt = {
+		"css",
+		"graphql",
+		"html",
+		"javascript",
+		"javascriptreact",
+		"json",
+		"jsonc",
+		"less",
+		"markdown",
+		"scss",
+		"toml",
+		"typescript",
+		"typescriptreact",
+		"vue",
+		"yaml",
+	},
+
+	prettier = {
+		"astro",
+		"css",
+		"graphql",
+		"handlebars",
+		"html",
+		"htmlangular",
+		"javascript",
+		"javascriptreact",
+		"json",
+		"jsonc",
+		"less",
+		"markdown",
+		"mdx",
+		"scss",
+		"typescript",
+		"typescriptreact",
+		"vue",
+		"yaml",
+	},
+
+	stylua = {
+		"lua",
 	},
 }
 
@@ -63,9 +67,7 @@ local function is_direct_dep(pkg)
 		local start = ctx.filename and vim.fs.dirname(ctx.filename) or vim.uv.cwd()
 		local pkg_jsons = vim.fs.find("package.json", { upward = true, path = start, limit = math.huge })
 		for _, pkg_json in ipairs(pkg_jsons) do
-			local ok, data = pcall(function()
-				return vim.json.decode(table.concat(vim.fn.readfile(pkg_json), "\n"))
-			end)
+			local ok, data = pcall(function() return vim.json.decode(table.concat(vim.fn.readfile(pkg_json), "\n")) end)
 			if ok and type(data) == "table" then
 				for _, field in ipairs({ "dependencies", "devDependencies", "peerDependencies", "optionalDependencies" }) do
 					if data[field] and data[field][pkg] then
@@ -104,6 +106,4 @@ conform.setup({
 	},
 })
 
-vim.keymap.set({ "n", "v" }, "<leader>f", function()
-	conform.format({ async = true })
-end)
+vim.keymap.set({ "n", "v" }, "<leader>f", function() conform.format({ async = true }) end)

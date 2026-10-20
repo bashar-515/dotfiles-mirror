@@ -7,6 +7,10 @@ local capabilities = require("blink.cmp").get_lsp_capabilities()
 lsp.config("astro", { capabilities = capabilities })
 lsp.enable("astro")
 
+-- clangd: xcode
+lsp.config("clangd", { capabilities = capabilities })
+lsp.enable("clangd")
+
 -- github.com/docker/docker-language-server: mise
 lsp.config("docker_language_server", { capabilities = capabilities })
 lsp.enable("docker_language_server")
