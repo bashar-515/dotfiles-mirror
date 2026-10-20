@@ -4,6 +4,9 @@
 
 ```
 brew install chezmoi
+```
+
+```
 brew install --cask 1password
 ```
 
