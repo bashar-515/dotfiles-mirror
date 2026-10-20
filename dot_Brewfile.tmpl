@@ -38,8 +38,6 @@ cask "spotify"
 cask "claude-code@latest"
 cask "raycast"
 
-cask "utm"
-
 cask "logi-options+"
 cask "logitech-g-hub"
 
@@ -52,12 +50,14 @@ brew "just"
 brew "poppler"
 brew "qpdf"
 
-cask "dopplerhq/cli/doppler", trusted: true
+brew "awscli"
+brew "postgresql"
 
 cask "docker-desktop"
 
-brew "awscli"
-brew "postgresql"
+cask "dopplerhq/cli/doppler", trusted: true
+
+cask "utm"
 
 {{- else }}
 
