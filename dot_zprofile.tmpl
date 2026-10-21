@@ -1,0 +1,12 @@
+{{- if eq .profile "clad" }}
+
+# The following lines were added by Docker Desktop to add commands to your PATH.
+export PATH="$PATH:/Users/bashareid/.docker/bin"
+# End of Docker Desktop section.
+
+{{- end }}
+
+BREW_BIN="/opt/homebrew/bin/brew"
+if [ -x  "$BREW_BIN" ]; then
+  eval "$("$BREW_BIN" shellenv)"
+fi
