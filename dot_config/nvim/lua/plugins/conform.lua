@@ -46,6 +46,7 @@ local fts_by_formatter = {
 		"markdown",
 		"mdx",
 		"scss",
+		"svelte",
 		"typescript",
 		"typescriptreact",
 		"vue",
