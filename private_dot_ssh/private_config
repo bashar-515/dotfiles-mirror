@@ -8,3 +8,7 @@ Host codeberg.org
 Host github.com
     IdentityFile ~/.ssh/id_ed25519_github.pub
     IdentitiesOnly yes
+
+Host gitlab.com
+    IdentityFile ~/.ssh/id_ed25519_gitlab.pub
+    IdentitiesOnly yes
