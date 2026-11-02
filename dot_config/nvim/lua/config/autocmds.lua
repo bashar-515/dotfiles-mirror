@@ -1,16 +1,17 @@
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = {
-		"lua",
+		"astro",
+		"css",
+		"html",
 		"javascript",
 		"javascriptreact",
-		"typescript",
-		"typescriptreact",
-		"html",
-		"css",
 		"json",
 		"jsonc",
-		"astro",
+		"lua",
+		"prisma",
 		"svelte",
+		"typescript",
+		"typescriptreact",
 	},
 
 	callback = function()
