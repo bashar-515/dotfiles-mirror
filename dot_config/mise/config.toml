@@ -1,5 +1,6 @@
 [tools]
 go = "latest"
+golangci-lint = "v2.15.0"
 node = "lts"
 pnpm = "latest"
 

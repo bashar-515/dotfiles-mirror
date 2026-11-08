@@ -5,11 +5,7 @@ local fts_by_formatter = {
 		"c",
 	},
 
-	gofumpt = {
-		"go",
-	},
-
-	goimports = {
+	["golangci-lint"] = {
 		"go",
 	},
 
@@ -85,6 +81,10 @@ conform.setup({
 	formatters_by_ft = formatters_by_ft,
 
 	formatters = {
+		["golangci-lint"] = {
+			cwd = util.root_file({ ".golangci.yml", ".golangci.yaml", ".golangci.toml", ".golangci.json" }),
+		},
+
 		oxfmt = {
 			command = util.find_executable({ "node_modules/.bin/oxfmt" }, "oxfmt"),
 			condition = is_direct_dep("oxfmt"),
