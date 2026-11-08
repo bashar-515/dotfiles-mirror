@@ -10,6 +10,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		"lua",
 		"prisma",
 		"svelte",
+		"toml",
 		"typescript",
 		"typescriptreact",
 	},
