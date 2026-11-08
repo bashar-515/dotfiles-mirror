@@ -15,6 +15,10 @@ lsp.enable("clangd")
 lsp.config("docker_language_server", { capabilities = capabilities })
 lsp.enable("docker_language_server")
 
+-- gopls: mise
+lsp.config("gopls", { capabilities = capabilities })
+lsp.enable("gopls")
+
 -- lua-language-server: brew
 lsp.config("lua_ls", { capabilities = capabilities })
 lsp.enable("lua_ls")
