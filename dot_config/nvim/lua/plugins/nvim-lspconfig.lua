@@ -23,6 +23,10 @@ lsp.enable("lua_ls")
 lsp.config("prismals", { capabilities = capabilities })
 lsp.enable("prismals")
 
+-- svelte-language-server: npm
+lsp.config("svelte", { capabilities = capabilities })
+lsp.enable("svelte")
+
 -- @tailwindcss/language-server: npm
 lsp.config("tailwindcss", { capabilities = capabilities })
 lsp.enable("tailwindcss")
