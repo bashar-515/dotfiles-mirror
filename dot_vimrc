@@ -42,3 +42,5 @@ set splitbelow
 set scrolloff=0
 set nowrap
 set undofile
+
+set rtp+=/opt/homebrew/opt/fzf
