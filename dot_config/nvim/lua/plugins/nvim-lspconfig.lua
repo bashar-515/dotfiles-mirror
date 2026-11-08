@@ -31,6 +31,10 @@ lsp.enable("tailwindcss")
 lsp.config("ts_ls", { capabilities = capabilities })
 lsp.enable("ts_ls")
 
+-- yaml-language-server: npm
+lsp.config("yamlls", { capabilities = capabilities })
+lsp.enable("yamlls")
+
 local map = vim.keymap.set
 
 local diagnostic = vim.diagnostic
