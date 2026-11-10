@@ -1,6 +1,17 @@
 vim.pack.add({ gh("stevearc/conform.nvim") })
 
 local fts_by_formatter = {
+	["biome-check"] = {
+		"css",
+		"graphql",
+		"javascript",
+		"javascriptreact",
+		"json",
+		"jsonc",
+		"typescript",
+		"typescriptreact",
+	},
+
 	["clang-format"] = {
 		"c",
 	},
@@ -81,6 +92,10 @@ conform.setup({
 	formatters_by_ft = formatters_by_ft,
 
 	formatters = {
+		["biome-check"] = {
+			condition = is_direct_dep("@biomejs/biome"),
+		},
+
 		["golangci-lint"] = {
 			cwd = util.root_file({ ".golangci.yml", ".golangci.yaml", ".golangci.toml", ".golangci.json" }),
 		},

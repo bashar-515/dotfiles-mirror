@@ -7,6 +7,10 @@ local capabilities = require("blink.cmp").get_lsp_capabilities()
 lsp.config("astro", { capabilities = capabilities })
 lsp.enable("astro")
 
+-- @biomejs/biome
+lsp.config("biome", { capabilities = capabilities })
+lsp.enable("biome")
+
 -- clangd: xcode
 lsp.config("clangd", { capabilities = capabilities })
 lsp.enable("clangd")
